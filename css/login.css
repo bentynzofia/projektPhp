@@ -2,19 +2,49 @@ body, div, h1, h3, p{
   margin: 0;
   padding: 0;
 }
+
+.image img{
+  position: absolute;
+  top: 30%;
+  /* transform: rotate(270deg); */
+  left: 15%;
+  height: 10em;
+  width: auto;
+}
+
 .content{
   max-width: 100%;
   min-height: 100%;
+
 }
 .login{
-  max-width: 100%;
+  width: 40%;
   min-height: 100%;
   position: absolute;
-  right: 0px;
+  right: 0;
+  /* top: 40%; */
+
+}
+
+.login input{
+  border-radius: 15px;
+  padding: 2%;
+  outline: none;
+  border-style: solid;
+
+}
+.image h1,.image h3{
+  font-family: 'Just Me Again Down Here';
+  font-size: 6em;
 }
 .image{
-  max-width: 100%;
+
+
+  width: 60%;
   min-height: 100%;
   position: absolute;
   left: 0px;
+  background-color: #ffbf00;
+  border-radius: 5%;
+
 }
