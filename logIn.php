@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>login</title>
     <link rel="stylesheet" href="css/login.css">
-    <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Open+Sans:300,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Varela+Round&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="content">
-      <div class="image">
+      <div class="imagePanel">
         <img src="css/img/loginPic.png" alt="">
-        <h1>Iknow</h1>
-        <h3>do you tho</h3>
+        <h1>wiseau</h1>
+        <h3>wiseau</h3>
 
       </div>
       <div class="login">
