@@ -69,6 +69,11 @@ body, div, h1, h3, p{
   min-height: 100%;
   position: absolute;
   left: -10%;
-  background-color: #768A9C;
+  /* background-color: #768A9C; */
+  transition: 1s ease;
   border-radius: 40px;
-}
+/* }
+.imagePanel:hover{
+  background-color: #ffcc00;
+    transition: 1s ease;
+} */
