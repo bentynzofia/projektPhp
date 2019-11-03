@@ -16,10 +16,9 @@
       </div>
       <div class="login">
         <input class="logIn"placeholder="Username" type="text" name="username" autocomplete="off" autofocus><br />
+        <input class="logIn"placeholder="Mail" type="text" name="mail" autocomplete="off" autofocus><br />
         <input class="logIn" placeholder="Password" type="password" name="password" autocomplete="off"><br />
         <input class="loginButton"type="submit" name="submit" value="Let's get started!">
-        <input class="loginButton"type="submit" name="submit" value="Catch up!"
-         onclick="window.location.href='http://localhost/projektPhp/signIn.php'">
 
       </div>
 
