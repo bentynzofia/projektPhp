@@ -1,0 +1,181 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+ul{
+  /* margin: 0; */
+  padding: 0;
+}
+p, h1{
+  cursor: default;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.main, .content, .navbar{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+.navbar{
+  left: 20%;
+  position: absolute;
+  border: 10px solid black;
+  width: 60%;
+  height: 20%;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  font-family:sans-serif;
+    transition: background-color linear 0.1s;
+}
+.navbar:hover{
+  background-color: #C20303;
+  color:#0d3019;
+  transition: background-color linear 0.1s;
+}
+
+.navbar .logo{
+  position:absolute;
+  left: 20%;
+  top: 5%;
+}
+
+.navbar p{
+  position:absolute;
+  right: 20%;
+  top: 5%;
+}
+/* menu */
+.menu a{
+  text-decoration:none;
+  color:black;
+  box-shadow: 5px 5px 0 #1c2670;
+  transition: background-color ease 0.5s, color linear 0.1s, box-shadow linear 0.1s;
+}
+.menu li{
+  list-style-type:none;
+  /* padding: 5%; */
+}
+.menu a:hover{
+  box-shadow: 5px 5px 0  #ccaa00;
+  /* color:  #C20303; */
+  padding: 1%;
+    color: #a88a11;
+  transition: background-color ease 0.5s, color linear 0.1s, box-shadow linear 0.1s;
+}
+.menu{
+  position: absolute;
+  top: -3%;
+  right: 30%;
+  line-height: 240%;
+  cursor: pointer;
+  text-align: right;
+}
+.noli{
+  display: none;
+}
+/* greeting */
+
+.greeting{
+  box-sizing: border-box;
+  border: 10px solid black;
+  position: absolute;
+  left: 20%;
+  top: 18%;
+  width: 60%;
+  /* width: 65%; */
+  height: 70%;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  font-family:sans-serif;
+    transition: background-color linear 0.1s;
+}
+.greeting:hover{
+  background-color: #1c2670;
+  color:#cf6e00;
+  transition: background-color linear 0.1s;
+}
+.greeting p, .greeting h1{
+  margin-left: 5%;
+}
+#h{
+  font-size: 50px;
+}
+.geetingColor{
+  background-color: #afbbcc;
+  transition: background-color ease 0.4s;
+}
+/* level */
+.level{
+  box-sizing: border-box;
+  border: 10px solid black;
+  position: absolute;
+  left: 20%;
+  top: 60%;
+  width: 30%;
+  height: 15%;
+  border-right: 5px;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  font-family:sans-serif;
+}
+/* myAnimation */
+.myAnimation{
+  box-sizing: border-box;
+  border: 10px solid black;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  border-left: 5px;
+  width: 30%;
+  height: 15%;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  font-family:sans-serif;
+
+}
+.myAnimation p, .level p{
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 5px;
+    text-align: center;
+}
+.myAnimation:hover, .level:hover{
+  background-color: #ecb200;
+  transition: background-color linear 0.2s;
+
+}
+
+/* date */
+.date{
+  box-sizing: border-box;
+  border: 10px solid black;
+  position: absolute;
+  left: 20%;
+  top: 80%;
+  width: 60%;
+  height:20%;
+  background-color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  font-family:sans-serif;
+}
+.date:hover{
+  background-color: #481c70;
+  color: #bf462e;
+  transition: background-color linear 0.1s;
+}
+.date p{
+  margin-left:3%;
+  transition: background-color linear 0.1s;
+}

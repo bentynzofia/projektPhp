@@ -40,6 +40,7 @@ margin-left: 5%;
   margin-left: 28em;
 }
 .nav{
+  background-color:#9fa4d1;
   height: 2em;
   width: 60%;
   /* background-color: #7574a3; */
@@ -51,7 +52,7 @@ margin-left: 5%;
     transition: background-color 1s ease;
 }
 .nav:hover{
-  background-color:#9fa4d1;
+  /* background-color:#9fa4d1; */
   transition: 1s ease;
 }
 .profile{
@@ -64,12 +65,13 @@ margin-left: 5%;
   top: 6em;
   transition: background-color 1s ease;
   text-align: center;
+      background-color: #b99fd1;
 }
 .profile h1{
   font-size: 2em;
 }
 .profile:hover{
-    background-color: #b99fd1;
+    /* background-color: #b99fd1; */
     transition: 1s ease;
     cursor: default;
 }
@@ -83,12 +85,14 @@ margin-left: 5%;
   top: 6em;
   transition: background-color 1s ease;
   text-align: center;
+  background-color: #cf9fd1;
+
 }
 .lvl h1{
   font-size: 2em;
 }
 .lvl:hover{
-    background-color: #cf9fd1;
+    /* background-color: #cf9fd1; */
     transition: 1s ease;
     cursor: default;
 }
@@ -103,12 +107,14 @@ margin-left: 5%;
   top: 16em;
   transition: background-color 1s ease;
   text-align: center;
+  background-color: #d19fb9;
+
 }
 .lastShownWord h1{
   font-size: 2em;
 }
 .lastShownWord:hover{
-    background-color: #d19fb9;
+    /* background-color: #d19fb9; */
     transition: 1s ease;
     cursor: default;
 }
@@ -122,12 +128,13 @@ margin-left: 5%;
   top: 16em;
   transition: 1s background-color ease;
   text-align: center;
+    background-color: #d19fa4;
 }
 .date h1{
   font-size: 2em;
 }
 .date:hover{
-    background-color: #d19fa4;
+    /* background-color: #d19fa4; */
     transition: 1s ease;
     cursor: default;
 }
