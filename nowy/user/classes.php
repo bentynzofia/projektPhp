@@ -15,12 +15,10 @@
       </div>
       <div class="content">
           <div class="greeting">
-            <p>Howdy Zosia</p>
-            <p>Let's get learning,</p>
-            <p>shall we?</p>
+            <p>Pick yours</p>
+
             <ul id="m" class="menu noli">
-              <li><a href="classes.php">classes</a></li>
-              <li><a href="credentials.php">credentials</a></li>
+              <li><a href="lessons.php">$className</a></li>
             </ul>
           </div>
           <div class="date">
