@@ -16,14 +16,16 @@
 
       </div>
       <div class="studentContain">
-        <input type="text" name="" value="">
-        <input type="text" name="" value="">
+        <input type="text" name="" value="" placeholder="login">
+        <input type="text" name="" value="" placeholder="password">
         <input type="submit" id="formSub" name="" value="login">
-        <button type="button"id="formSub left" name="button">sign in</button>
+        <button type="button"id="formSub" name="button">sign in</button>
         </button>
 
       </div>
       </div>
+
+      <img src="../../img/8852.jpg" alt="">
 
     </div>
   </body>
