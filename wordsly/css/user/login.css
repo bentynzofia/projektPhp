@@ -38,7 +38,7 @@ text-align: right;
 
 .studentContain{
   position: absolute;
-  top: 0%;
+  top: 25%;
   left:50%;
   min-height: 100%;
   scroll-behavior: smooth;
@@ -47,7 +47,7 @@ text-align: right;
   margin-top: 30%;
 }
 
-.studentContain button{
+.studentContain button, .studentContain input{
   /* transform: translateY(250%); */
   width: 400px;
   height: 50px;
@@ -56,18 +56,23 @@ text-align: right;
   border-radius: 15px;
   border: none;
   background-color: #fafcff;
-  box-shadow: 0px 6px 8px rgb(0,0,0,0.46) ;
+  box-shadow: 0px 6px 8px rgb(112, 126, 153,0.46) ;
   font-family: Nunito;
     transition: box-shadow 0.4s ease;
 }
+#formSub{
+  width: 45%;
+  display: inline;
+}
+
 
 .studentContain a{
   text-decoration: none;
   color:#9D9B9B;
 }
-.studentContain button:hover{
+.studentContain button:hover, .studentContain input:hover{
   transition: 0.4s ease;
-  box-shadow: 0px 3px 2px rgb(0,0,0,0.46) ;
+  box-shadow: 0px 3px 2px rgb(112, 126, 153,0.66) ;
 }
 
 .studentContain{
