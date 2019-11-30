@@ -19,7 +19,7 @@ include("../index.php");
 
       </div>
       </div>
-
+  <img src="../../img/settings (1).svg" alt="">
     </div>
   </body>
 </html>

@@ -20,6 +20,8 @@ include("../index.php");
       </div>
       </div>
 
+      <img src="../../img/notebook.svg" alt="">
+
     </div>
   </body>
 </html>

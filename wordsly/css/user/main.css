@@ -3,32 +3,30 @@
 html, body, *{
   margin: 0;
   padding: 0;
-
+  cursor: default;
 }
 
 .studentInterface{
   width: 0;
-      height: 0;
-      border-top: 600px solid #BBD2FF;
-      border-right: 600px solid transparent;
-      position:fixed;
-      z-index: -1;
-      /* float:right; */
+  height: 0;
+  border-top: 600px solid #BBD2FF;
+  border-right: 600px solid transparent;
+  position:fixed;
+  z-index: -1;
 }
 .text{
-position: absolute;
-left:10%;
-top:5%;
-font-family: Nunito, sans-serif;
-font-size:150%;
-color: white;
-text-align: right;
+  position: absolute;
+  left:10%;
+  top:5%;
+  font-family: Nunito, sans-serif;
+  font-size:150%;
+  color: white;
+  text-align: right;
 }
 .logo{
   position: fixed;
   font-size: 160%;
   font-weight: 900;
-  /* font-style: italic; */
 }
 .greeting{
   margin-top: 5%;
@@ -48,7 +46,6 @@ text-align: right;
 }
 
 .studentContain button{
-  /* transform: translateY(250%); */
   width: 400px;
   height: 50px;
   display: block;
@@ -58,18 +55,25 @@ text-align: right;
   background-color: #fafcff;
   box-shadow: 0px 6px 8px rgb(112, 126, 153,0.46) ;
   font-family: Nunito;
-    transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  cursor: pointer;
+
 }
 
 .studentContain a{
   text-decoration: none;
   color:#9D9B9B;
+  cursor: pointer;
+
 }
 .studentContain button:hover{
   transition: 0.4s ease;
   box-shadow: 0px 3px 2px rgb(112, 126, 153,0.66) ;
 }
 
-.studentContain{
-    /* background-color: #bebbff; */
+img{
+  max-width: 10%;
+  position: absolute;
+  right: 5%;
+  bottom:10%;
 }

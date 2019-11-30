@@ -3,39 +3,35 @@
 html, body, *{
   margin: 0;
   padding: 0;
-
 }
 
 .studentInterface{
   width: 0;
-      height: 0;
-      border-top: 300px solid #BBD2FF;
-      border-right: 1000px solid transparent;
-      position:fixed;
-      z-index: -1;
-      /* float:right; */
+  height: 0;
+  border-top: 300px solid #BBD2FF;
+  border-right: 1000px solid transparent;
+  position:fixed;
+  z-index: -1;
 }
 .text{
-position: absolute;
-left:10%;
-top:5%;
-font-family: Nunito, sans-serif;
-font-size:150%;
-color: white;
-text-align: right;
+  position: absolute;
+  left:10%;
+  top:5%;
+  font-family: Nunito, sans-serif;
+  font-size:150%;
+  color: white;
+  text-align: right;
 }
 .logo{
   position: fixed;
   font-size: 160%;
   font-weight: 900;
-  /* font-style: italic; */
 }
 
 .studentContain{
   position: absolute;
   top: 35%;
   left:50%;
-  /* min-height: 70%; */
   scroll-behavior: smooth;
 }
 .buttons{
@@ -62,7 +58,6 @@ text-align: right;
 }
 #formSub{
   transform: translateX(-101%);
-  /* transition: 0.4 ease; */
   width: 49%;
   display: inline;
 }
@@ -71,7 +66,6 @@ text-align: right;
   transition: 0.4 ease;
 }
 
-
 .studentContain a{
   text-decoration: none;
   color:#9D9B9B;
@@ -79,15 +73,10 @@ text-align: right;
 .studentContain button:hover, .studentContain input:hover{
   transition: 0.4s ease;
   box-shadow: 0px 3px 2px rgb(112, 126, 153,0.66) ;
-
 }
 
-.studentContain{
-    /* background-color: #bebbff; */
-}
 img{
   max-width: 25%;
-  /* transform: translateY(-100%); */
   position: absolute;
   right: 5%;
   bottom:10%;
