@@ -1,5 +1,5 @@
 <?php
-include("../index.php");
+include("../inc/index.php");
  ?>
       <div class="studentInterface">
 
