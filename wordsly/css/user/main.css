@@ -29,7 +29,7 @@ html, body, *{
   font-weight: 900;
 }
 .greeting{
-  margin-top: 5%;
+  margin-top:50px;
   position: fixed;
   font-weight: 600;
 }
@@ -37,15 +37,15 @@ html, body, *{
 .studentContain{
   position: absolute;
   top: 0%;
-  left:50%;
+  left:60%;
   min-height: 100%;
   scroll-behavior: smooth;
 }
 .buttons{
-  margin-top: 30%;
+  margin-top: 40%;
 }
 
-.studentContain button{
+/* .studentContain button{
   width: 400px;
   height: 50px;
   display: block;
@@ -58,6 +58,22 @@ html, body, *{
   transition: box-shadow 0.4s ease;
   cursor: pointer;
 
+} */
+
+.studentContain button{
+  transform: translateX(-50%);
+  width: 300px;
+  height: 50px;
+  display: block;
+  margin-bottom: 5%;
+  color:#9D9B9B;
+  border-radius: 15px;
+  border: none;
+  background-color: #fafcff;
+  box-shadow: 0px 6px 8px rgb(112, 126, 153,0.46) ;
+  font-family: Nunito;
+    transition: box-shadow 0.4s ease;
+    text-align: center;
 }
 
 .studentContain a{
