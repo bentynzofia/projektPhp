@@ -3,8 +3,54 @@
 html, body, *{
   margin: 0;
   padding: 0;
+  font-family: Nunito, sans-serif;
+  font-size: 12px;
 }
 
+/* input[type="radio"] + label span{
+  display:inline-block;
+  vertical-align:middle;
+} */
+input, button{
+  outline: none;
+}
+
+form{
+  margin-top: -20%;
+  background-color: white;
+  width: 200px;
+  height: 270px;
+  transform: translateX(-150%);
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px lightgrey;
+}
+input{
+  outline:none;
+  border: none;
+  border-bottom: 1px solid  #BBD2FF;
+  margin-top: 15%;
+  padding: 4px;
+
+}
+input::placeholder{
+  color: grey;
+  padding-bottom:10px;
+}
+.button{
+border: none;
+height: 25px;
+width: 150px;
+border-radius: 15px;
+}
+.fillIn{
+color: white;
+background-color:  #BBD2FF;
+  }
+
+.space{
+  margin-top: 10px;
+}
 .studentInterface{
   width: 0;
   height: 0;
@@ -13,6 +59,7 @@ html, body, *{
   position:fixed;
   z-index: -1;
 }
+
 .text{
   position: absolute;
   left:10%;
@@ -38,8 +85,10 @@ html, body, *{
   margin-top: 30%;
 }
 
+
+/*
 .studentContain button, .studentContain input{
-  transform: translateX(-50%);
+
   width: 300px;
   height: 50px;
   display: block;
@@ -56,11 +105,6 @@ html, body, *{
 .studentContain input::placeholder{
   color: #9d9b9b;
 }
-#formSub{
-  transform: translateX(-101%);
-  width: 49%;
-  display: inline;
-}
 #formSub:hover{
   background-color: #e3ecff;
   transition: 0.4 ease;
@@ -73,7 +117,7 @@ html, body, *{
 .studentContain button:hover, .studentContain input:hover{
   transition: 0.4s ease;
   box-shadow: 0px 3px 2px rgb(112, 126, 153,0.66) ;
-}
+}*/
 
 img{
   max-width: 25%;
@@ -86,6 +130,6 @@ img{
 
 @media only screen and (max-width:960px){
   .studentContain button, .studentContain input{
-    width: 250px;
+    /* width: 250px; */
   }
 }

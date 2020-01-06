@@ -8,13 +8,16 @@ include("../inc/index.php");
         <div class="buttons">
 
         <button type="button" name="button">
+          <a href="#">recent</a>
+        </button>
+        <button type="button" name="button">
+          <a href="#">add set</a>
+        </button>
+        <button type="button" name="button">
+          <a href="#">set list</a>
+        </button>
+        <button type="button" name="button">
           <a href="#">lessons</a>
-        </button>
-        <button type="button" name="button">
-          <a href="#">$score</a>
-        </button>
-        <button type="button" name="button">
-          <a href="#">ranking</a>
         </button>
 
       </div>

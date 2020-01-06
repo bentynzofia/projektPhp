@@ -9,8 +9,8 @@ html, body, *{
 .studentInterface{
   width: 0;
   height: 0;
-  border-top: 600px solid #BBD2FF;
-  border-right: 600px solid transparent;
+  border-top: 900px solid #BBD2FF;
+  border-right: 900px solid transparent;
   position:fixed;
   z-index: -1;
 }
