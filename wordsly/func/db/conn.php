@@ -17,7 +17,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
   $email=$_POST['email'];
 
   $sqlStudent = "INSERT INTO `students`(`studentId`, `studentLogin`, `studentPassword`, `studentEmail`) VALUES ('','$login','$password','$email')";
-  $sqlTeacher = "INSERT INTO `teachers`(`teacherId`, `teacherLogin`, `teacherEmail`, `teacherPassword`) VALUES ('','$login','$email', '$password')";
+ $sqlTeacher = "INSERT INTO `teachers`(`teacherId`, `teacherLogin`, `teacherEmail`, `teacherPassword`) VALUES ('','$login','$email', '$password')";
 
 
   if($_POST['user'] == "student"){
@@ -27,12 +27,20 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
     }else{
       echo "ERROR: Could not able to execute myself"."</br>" . mysqli_error($conn);
     }}
-  } if($_POST['user'] == "teacher"){
+  }
+   if($_POST['user'] == "teacher"){
     echo "teacher";
     if(mysqli_query($conn, $sqlTeacher)){
       echo "fufu";
+        header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
+
     }else{
       echo "ERROR: Could not able to execute myself"."</br>" . mysqli_error($conn);
 
     }}
+  }
+  //sprawdzenie czy login jest juz w bazie
+  //sprawdzenie czy uzytkownik jest w bazie i przekierowanie do profiku uzytkownika
+  //co jesli nie poda rejestracji i kliknie REJESTRUJ
+  //to samo z loginem
     ?>
