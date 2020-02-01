@@ -16,18 +16,32 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
   $password=$_POST['password'];
   $email=$_POST['email'];
 
+  //sprawdzam loginy
+  $teacherLoginCheck = "SELECT `teacherLogin` FROM `teachers`";
+  $resultTC = mysqli_query($conn, $teacherLoginCheck);
+//aaa
+
   $sqlStudent = "INSERT INTO `students`(`studentId`, `studentLogin`, `studentPassword`, `studentEmail`) VALUES ('','$login','$password','$email')";
  $sqlTeacher = "INSERT INTO `teachers`(`teacherId`, `teacherLogin`, `teacherEmail`, `teacherPassword`) VALUES ('','$login','$email', '$password')";
 
   if($_POST['user'] == "student"){
-    //echo "student";
-    if(mysqli_query($conn, $sqlStudent)){
-        //echo "jeje";
-        header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
-    }else{
-      echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
-    }}
-  }
+
+      $studentLoginCheck = "SELECT `studentLogin` FROM `students` WHERE  `studentLogin`= '$login'";
+      $resultSC = mysqli_query($conn, $studentLoginCheck);
+      echo "<p>Ten login już jest zajęty</p>";
+      $row1 = mysqli_fetch_assoc($resultSC);
+      if($row1['studentLogin'] !== $login){
+        //echo "student";
+        if(mysqli_query($conn, $sqlStudent)){
+            //echo "jeje";
+            header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
+        }else{
+          echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
+        }}
+      }
+      }
+
+
    if($_POST['user'] == "teacher"){
     //echo "teacher";
     if(mysqli_query($conn, $sqlTeacher)){
@@ -37,8 +51,8 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
     }else{
       echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
 
-    }}
-  }
+    }}}
+
 
   //logowanie kolejno student, teacher, admin
   if(isset($_POST['loginButton'])){
@@ -78,7 +92,4 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
 }}}
 
   //sprawdzenie czy login jest juz w bazie
-  //sprawdzenie czy uzytkownik jest w bazie i przekierowanie do profiku uzytkownika
-  //co jesli nie poda rejestracji i kliknie REJESTRUJ
-  //to samo z loginem
     ?>
