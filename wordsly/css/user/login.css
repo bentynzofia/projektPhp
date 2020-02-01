@@ -6,11 +6,9 @@ html, body, *{
   font-family: Nunito, sans-serif;
   font-size: 12px;
 }
-
-/* input[type="radio"] + label span{
-  display:inline-block;
-  vertical-align:middle;
-} */
+#notice{
+  color: grey;
+}
 input, button{
   outline: none;
 }
@@ -85,40 +83,6 @@ background-color:  #BBD2FF;
   margin-top: 30%;
 }
 
-
-/*
-.studentContain button, .studentContain input{
-
-  width: 300px;
-  height: 50px;
-  display: block;
-  margin-bottom: 5%;
-  color:#9D9B9B;
-  border-radius: 15px;
-  border: none;
-  background-color: #fafcff;
-  box-shadow: 0px 6px 8px rgb(112, 126, 153,0.46) ;
-  font-family: Nunito;
-    transition: background-color 0.4s ease;
-    text-align: center;
-}
-.studentContain input::placeholder{
-  color: #9d9b9b;
-}
-#formSub:hover{
-  background-color: #e3ecff;
-  transition: 0.4 ease;
-}
-
-.studentContain a{
-  text-decoration: none;
-  color:#9D9B9B;
-}
-.studentContain button:hover, .studentContain input:hover{
-  transition: 0.4s ease;
-  box-shadow: 0px 3px 2px rgb(112, 126, 153,0.66) ;
-}*/
-
 img{
   max-width: 25%;
   position: absolute;
@@ -130,6 +94,6 @@ img{
 
 @media only screen and (max-width:960px){
   .studentContain button, .studentContain input{
-    /* width: 250px; */
+  
   }
 }
