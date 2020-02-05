@@ -17,8 +17,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
   $email=$_POST['email'];
 
   //sprawdzam loginy
-  $teacherLoginCheck = "SELECT `teacherLogin` FROM `teachers`";
-  $resultTC = mysqli_query($conn, $teacherLoginCheck);
+
 //aaa
 
   $sqlStudent = "INSERT INTO `students`(`studentId`, `studentLogin`, `studentPassword`, `studentEmail`) VALUES ('','$login','$password','$email')";
@@ -28,30 +27,46 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
 
       $studentLoginCheck = "SELECT `studentLogin` FROM `students` WHERE  `studentLogin`= '$login'";
       $resultSC = mysqli_query($conn, $studentLoginCheck);
-      echo "<p>Ten login już jest zajęty</p>";
       $row1 = mysqli_fetch_assoc($resultSC);
-      if($row1['studentLogin'] !== $login){
-        //echo "student";
-        if(mysqli_query($conn, $sqlStudent)){
-            //echo "jeje";
-            header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
-        }else{
-          echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
-        }}
+
+      $studentEmailCheck = "SELECT `studentEmail` FROM `students` WHERE `studentEmail`='$email'";
+      $resultSEC = mysqli_query($conn, $studentEmailCheck);
+      $row2 = mysqli_fetch_assoc($resultSEC);
+
+      if($row1['studentLogin'] !== $login && $row2['studentEmail'] !== $email){
+          if(mysqli_query($conn, $sqlStudent)){
+              //echo "jeje";
+              header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
+          }else{
+            echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
+          }
+        }
       }
-      }
+
 
 
    if($_POST['user'] == "teacher"){
-    //echo "teacher";
-    if(mysqli_query($conn, $sqlTeacher)){
-      //echo "ok";
-        header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
 
-    }else{
-      echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
+     $teacherLoginCheck = "SELECT `teacherLogin` FROM `teachers` WHERE  `teacherLogin`= '$login'";
+     $resultTC = mysqli_query($conn, $teacherLoginCheck);
+     $row1 = mysqli_fetch_assoc($resultTC);
 
-    }}}
+     $teacherEmailCheck = "SELECT `teacherEmail` FROM `teachers` WHERE `teacherEmail`=' $email'";
+     $resultTEC = mysqli_query($conn, $teacherEmailCheck);
+     $row2 = mysqli_fetch_assoc($resultTEC);
+
+     if($row1['teacherLogin'] !== $login && $row2['teacherEmail'] !== $email){
+       //echo "teacher";
+       if(mysqli_query($conn, $sqlTeacher)){
+         //echo "ok";
+           header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
+
+       }else{
+         echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
+
+       }}
+     }
+  }}
 
 
   //logowanie kolejno student, teacher, admin
@@ -91,5 +106,6 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
 
 }}}
 
-  //sprawdzenie czy login jest juz w bazie
+  //regex na maila
+  //regex na hasło
     ?>

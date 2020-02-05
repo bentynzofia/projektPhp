@@ -4,8 +4,28 @@ include('../../func/db/conn.php');
  ?>
 
         <form  method="post">
-          <input type="text" name="login" value="" placeholder="username" autocomplete="off">
-          <input type="text" name="email" value="" placeholder="email" autocomplete="off">
+          <input type="text" name="login" value="" placeholder="username" autocomplete="off"
+          <?php
+          if(isset($row1['studentLogin'])){
+            if( $row1['studentLogin'] == $login){
+              echo 'style="border-bottom:1px solid red;"';
+            }
+          }else if(isset($row1['teacherLogin'])){
+            if($row1['teacherLogin'] ==$login){
+              echo 'style="border-bottom:1px solid red;"';
+            }
+          } ?>>
+          <input type="text" name="email" value="" placeholder="email" autocomplete="off"
+          <?php
+          if(isset($row2['studentEmail'])){
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL) || $row2['studentEmail'] == $email){
+              echo 'style="border-bottom:1px solid red;"';
+            }
+          } if(isset($row2['teacherEmail'])){
+              if(!filter_var($email, FILTER_VALIDATE_EMAIL) ||$row2['teacherEmail'] ==$email){
+                echo 'style="border-bottom:1px solid red;"';
+              }
+            } ?>>
           <input type="password" name="password" value="" placeholder="password" autocomplete="off"></br>
           <input type="radio" id="user1" name="user" value="student">
           <label  for="user1"><span></span>student</label>
