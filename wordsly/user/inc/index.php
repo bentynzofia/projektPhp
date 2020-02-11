@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,6 +15,8 @@
           wordsly
         </h3>
         <p class="greeting">
-          hi there $username
+          hi there   <?php
+            echo $_SESSION['login'];
+            ?>
         </p>
       </div>

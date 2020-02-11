@@ -1,4 +1,5 @@
 <?php
+
 include('../inc/logisignin.php');
 include('../../func/db/conn.php');
  ?>
@@ -11,18 +12,22 @@ include('../../func/db/conn.php');
               echo 'style="border-bottom:1px solid red;"';
             }
           }else if(isset($row1['teacherLogin'])){
-            if($row1['teacherLogin'] ==$login){
+            if($row1['teacherLogin'] == $login){
               echo 'style="border-bottom:1px solid red;"';
             }
           } ?>>
           <input type="text" name="email" value="" placeholder="email" autocomplete="off"
           <?php
           if(isset($row2['studentEmail'])){
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL) || $row2['studentEmail'] == $email){
+            if($filtr == 1){
+              echo 'style="border-bottom:1px solid red;"';
+            }else if($row2['studentEmail'] == $email){
               echo 'style="border-bottom:1px solid red;"';
             }
-          } if(isset($row2['teacherEmail'])){
-              if(!filter_var($email, FILTER_VALIDATE_EMAIL) ||$row2['teacherEmail'] ==$email){
+          }else if(isset($row2['teacherEmail'])){
+            if($filtr == 1){
+              echo 'style="border-bottom:1px solid red;"';
+            }else if($row2['teacherEmail'] == $email){
                 echo 'style="border-bottom:1px solid red;"';
               }
             } ?>>
