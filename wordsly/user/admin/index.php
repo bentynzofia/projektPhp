@@ -16,6 +16,9 @@ include("../inc/index.php");
         <button type="button" name="button">
           <a href="#">classes</a>
         </button>
+        <button type="button" name="button">
+          <a href="../../func/login/logout.php">log out</a>
+        </button>
 
       </div>
       </div>

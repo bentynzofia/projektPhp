@@ -38,7 +38,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
 
           if(mysqli_query($conn, $sqlStudent)){
-              header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
+              header('Location: ../login/login.php');
           }else{
             echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
           }
@@ -69,7 +69,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
          $_SESSION['email'] = $email;
          if(mysqli_query($conn, $sqlTeacher)){
            //echo "ok";
-             header('Location: http://localhost/projektPhp/wordsly/user/login/login.php');
+             header('Location: ../login/login.php');
 
          }else{
            echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
@@ -95,7 +95,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
 
       $_SESSION['login'] = $login;
       $_SESSION['password'] = $password;
-            
+
       $resultT = mysqli_query($conn, $teacherLogin);
       $resultS = mysqli_query($conn, $studentLogin);
       $resultA = mysqli_query($conn, $adminLogin);
@@ -123,6 +123,4 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
 
 }}}
 
-  //regex na maila
-  //regex na hasło
     ?>
