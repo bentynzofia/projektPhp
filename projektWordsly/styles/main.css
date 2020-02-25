@@ -43,28 +43,31 @@ html, body, *{
 
 }
 .buttons{
-  margin-top: 40%;
-
+  margin-top: 80%;
+  margin-left: 100%;
+}
+.button{
+border: none;
+height: 25px;
+width: 150px;
+border-radius: 15px;
+outline:none;
+border: none;
+margin-top: 15%;
+padding: 4px;
+  transition: 0.4s ease;
 }
 
-
-.studentContain button{
-  transform: translateX(-50%);
-  width: 300px;
-  height: 50px;
-  display: block;
-  margin-bottom: 5%;
-  color:#9D9B9B;
-  border-radius: 15px;
-  border: none;
-  background-color: #fafcff;
-  box-shadow: 0px 6px 8px rgb(112, 126, 153,0.46) ;
-  font-family: Nunito;
-    transition: box-shadow 0.4s ease;
-    text-align: center;
-    outline:none;
+.menuOpt{
+margin-top: -20%;
+background-color: white;
+width: 200px;
+height: 270px;
+transform: translateX(-150%);
+text-align: center;
+border-radius: 15px;
+box-shadow: 0px 5px 10px lightgrey;
 }
-
 .studentContain a{
   text-decoration: none;
   color:#9D9B9B;

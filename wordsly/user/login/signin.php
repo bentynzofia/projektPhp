@@ -20,6 +20,7 @@ include('../../func/db/conn.php');
           <?php
           if(isset($row2['studentEmail'])){
             if($filtr == 1){
+              echo 'lol';
               echo 'style="border-bottom:1px solid red;"';
             }else if($row2['studentEmail'] == $email){
               echo 'style="border-bottom:1px solid red;"';

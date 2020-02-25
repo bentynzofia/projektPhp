@@ -8,6 +8,7 @@ if ($conn===false) {
 //echo "szczypiorek";
 
 }
+
 //sql for registration
 if(isset($_POST['register'])) {
 //echo "szcz";
@@ -16,7 +17,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
   $password=$_POST['password'];
   $email=$_POST['email'];
 
-  //sprawdzam loginy
+//  echo 'sprawdzam loginy';
 
 //aaa
 
@@ -25,8 +26,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
 
   if($_POST['user'] == "student"){
     $filtr = 0;
-
-      $studentLoginCheck = "SELECT `studentLogin` FROM `students` WHERE  `studentLogin`= '$login'";
+      $studentLoginCheck = "SELECT `studentLogin` FROM `students`  WHERE  `studentLogin`= '$login'";
       $resultSC = mysqli_query($conn, $studentLoginCheck);
       $row1 = mysqli_fetch_assoc($resultSC);
 
@@ -34,19 +34,23 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
       $resultSEC = mysqli_query($conn, $studentEmailCheck);
       $row2 = mysqli_fetch_assoc($resultSEC);
 
+
       if($row1['studentLogin'] !== $login && $row2['studentEmail'] !== $email ){
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-
           if(mysqli_query($conn, $sqlStudent)){
               header('Location: ../login/login.php');
           }else{
             echo "ERROR: Could not execute myself"."</br>" . mysqli_error($conn);
           }
         }else{
-          $filtr = 1;
+          $filtr += 1;
         }
-        }
+      }else{
+        $filtr += 1;
       }
+    }else{
+      $filtr += 1;
+    }
 
 
 
@@ -81,6 +85,7 @@ if(!empty($_POST['login'])&&!empty($_POST['password'])&&!empty($_POST['email'])&
        }
      }
   }}
+
 
 
   //logowanie kolejno student, teacher, admin
