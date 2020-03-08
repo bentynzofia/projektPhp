@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("inc/index.php");
  ?>
       <div class="studentInterface">
@@ -16,11 +17,8 @@ include("inc/index.php");
         <button type="button" class="button"name="button">
           <a href="#">students</a>
         </button>
-        <button type="button" name="button"class="button">
-          <a href="#">classes</a>
-        </button>
         <button type="button" name="button" class="button">
-          <a href="../../func/login/logout.php">log out</a>
+          <a href="../login/logout.php">log out</a>
         </button>
 </div>
       </div>

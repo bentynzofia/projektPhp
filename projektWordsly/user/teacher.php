@@ -15,13 +15,10 @@ include("inc/index.php");
           <a href="#">classes</a>
         </button>
         <button type="button" name="button" class="button">
-          <a href="#">stats</a>
+          <a href="#">lessons</a>
         </button>
         <button type="button" name="button" class="button">
-          <a href="#">ranking</a>
-        </button>
-        <button type="button" name="button" class="button">
-          <a href="../../login/logout.php">log out</a>
+          <a href="../login/logout.php">log out</a>
         </button>
         </div>
       </div>

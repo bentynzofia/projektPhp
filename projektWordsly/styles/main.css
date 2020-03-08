@@ -4,6 +4,7 @@ html, body, *{
   margin: 0;
   padding: 0;
   cursor: default;
+
 }
 
 .studentInterface{
@@ -42,6 +43,27 @@ html, body, *{
   scroll-behavior: smooth;
 
 }
+
+.leftPanel{
+  margin: 0px;
+  /* position: relative; */
+  left: 20%;
+  top:30%;
+  text-align: center;
+  padding: 0px;
+}
+
+.leftPanel input{
+width: 40%;
+background-color: #eee;
+text-align: center;
+margin: 10px;
+padding: 2px;
+  }
+
+.leftPanelDiv {
+text-align: center;
+  }
 .buttons{
   margin-top: 80%;
   margin-left: 100%;
@@ -56,17 +78,34 @@ border: none;
 margin-top: 15%;
 padding: 4px;
   transition: 0.4s ease;
+    font-family: Nunito, sans-serif;
+    font-size: 80%;
+    text-align: center;
 }
 
 .menuOpt{
 margin-top: -20%;
 background-color: white;
 width: 200px;
-height: 270px;
+height: 200px;
 transform: translateX(-150%);
 text-align: center;
 border-radius: 15px;
 box-shadow: 0px 5px 10px lightgrey;
+}
+
+.formOpt{
+  position: absolute;
+  margin-top: 12.5%;
+  margin-left: 25%;
+  background-color: white;
+  width: 300px;
+  min-height: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px #96A8CC;
+
 }
 .studentContain a{
   text-decoration: none;

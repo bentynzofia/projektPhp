@@ -9,11 +9,8 @@ include("inc/index.php");
 
         <div class="buttons">
           <div class="menuOpt">
-            <button type="button"class="button" name="button">
-              <a href="#">add set</a>
-            </button>
             <button type="button" class="button"name="button">
-              <a href="#">set list</a>
+              <a href="sets.php">sets</a>
             </button>
             <button type="button" class="button"name="button">
               <a href="#">lessons</a>

@@ -6,12 +6,13 @@ $emailfiltr = 0;
 if(isset($_POST["registering"]) &&  $_POST['login'] && !empty($_POST['password']) &&! empty($_POST['email'])){
   $userType = $_POST['userType'];
   $login = $_POST['login'];
-  $password=$_POST['password'];
+  $password = $_POST['password'];
+  $passwordH = PASSWORD_HASH($password, PASSWORD_DEFAULT);
   $email=$_POST['email'];
 
 
-  $sqlStudent = "INSERT INTO `students`(`studentId`, `studentLogin`, `studentEmail`) VALUES ('','$login','$email')";
-  $sqlTeacher = "INSERT INTO `teachers`(`teacherId`, `teacherLogin`, `teacherEmail`) VALUES ('','$login','$email')";
+  $sqlStudent = "INSERT INTO `students`(`studentId`, `studentLogin`, `studentEmail`, `studentPass`) VALUES ('','$login','$email', '$passwordH')";
+  $sqlTeacher = "INSERT INTO `teachers`(`teacherId`, `teacherLogin`, `teacherEmail`, `teacherPass`) VALUES ('','$login','$email','$passwordH')";
 
 
   if($userType=="student"){
