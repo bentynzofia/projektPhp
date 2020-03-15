@@ -39,19 +39,34 @@ echo    '</div>';
 
 }
 if(isset($_POST['wordsSub'])&& !empty($_POST["setName"])){
+
+  $sql1 = "SELECT * FROM `students` where `studentLogin`='$_SESSION[login]'";
+  $result1 = mysqli_query($conn, $sql1);
+  $row1 = mysqli_fetch_assoc($result1);
+
+  $zalogowany = $row1['studentId'];
+
   $wordsAmount = $_POST['hiddenInput'];
   $setName = $_POST["setName"];
-  $sql = "INSERT INTO `sets`(`setId`, `setName`) VALUES (null,'$setName')";
+  $sql = "INSERT INTO `sets`(`setId`, `setName`, `studentId`) VALUES (null,'$setName', '$zalogowany')";
   $result = mysqli_query($conn, $sql);
 
+$sqlSI = "SELECT `setId`,`setName` from `sets` where `setName`='$setName'";
+$result = mysqli_query($conn, $sqlSI);
+$row = mysqli_fetch_assoc($result);
+ $setId=$row['setId'];
+
   for($j=0; $j<$wordsAmount; $j++){
+    
     $word = $_POST["eng"][$j];
     $translation = $_POST["pl"][$j];
 
-    $sqlW = "INSERT INTO `words`(`word`, `translation`)
-              values ('$word', '$translation')";
+    $sqlW = "INSERT INTO `words`(`wordId`, `word`, `translation`,`lessonId`, `setId`)
+              values (null, '$word', '$translation', null, '$setId')";
 
     $resultW = mysqli_query($conn, $sqlW);
+
+
   }
 
 }else if(isset($_POST['wordsSub']) && empty($_POST["setName"])){

@@ -24,6 +24,7 @@ if(isset($_POST['loginButton'])){
 
     $_SESSION['login'] = $login;
     $_SESSION['password'] = $password;
+    
 
     $resultT = mysqli_query($conn, $teacherLogin);
     $resultTp = mysqli_query($conn, $teacherPass);
@@ -41,6 +42,7 @@ if(isset($_POST['loginButton'])){
         while($row2 = mysqli_fetch_assoc($resultSp)){
           if(password_verify($password, $passwordH)){
           header("location: ../user/student.php");
+
         }
         }
 
