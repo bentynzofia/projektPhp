@@ -6,7 +6,10 @@ html, body, *{
   cursor: default;
 
 }
-
+.alert {
+  font-family: Nunito, sans-serif;
+  color: grey;
+}
 .studentInterface{
   width: 0;
   height: 0;
@@ -106,6 +109,10 @@ box-shadow: 0px 5px 10px lightgrey;
   border-radius: 15px;
   box-shadow: 0px 5px 10px #96A8CC;
 
+}
+
+.inputCol{
+  color: #9D9B9B;
 }
 .studentContain a{
   text-decoration: none;

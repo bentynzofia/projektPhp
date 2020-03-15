@@ -38,7 +38,7 @@ echo    '</form>';
 echo    '</div>';
 
 }
-if(isset($_POST['wordsSub'])){
+if(isset($_POST['wordsSub'])&& !empty($_POST["setName"])){
   $wordsAmount = $_POST['hiddenInput'];
   $setName = $_POST["setName"];
   $sql = "INSERT INTO `sets`(`setId`, `setName`) VALUES (null,'$setName')";
@@ -54,5 +54,10 @@ if(isset($_POST['wordsSub'])){
     $resultW = mysqli_query($conn, $sqlW);
   }
 
+}else if(isset($_POST['wordsSub']) && empty($_POST["setName"])){
+  echo  '<div class="formOpt">';
+
+  echo '<p class="alert">Name your set!</p>';
+  echo    '</div>';
 }
  ?>
