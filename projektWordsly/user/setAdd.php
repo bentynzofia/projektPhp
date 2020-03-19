@@ -57,14 +57,21 @@ $row = mysqli_fetch_assoc($result);
  $setId=$row['setId'];
 
   for($j=0; $j<$wordsAmount; $j++){
-    
+
     $word = $_POST["eng"][$j];
     $translation = $_POST["pl"][$j];
 
     $sqlW = "INSERT INTO `words`(`wordId`, `word`, `translation`,`lessonId`, `setId`)
-              values (null, '$word', '$translation', null, '$setId')";
+              values (null, '$word', '$translation', 1, $setId)";
 
     $resultW = mysqli_query($conn, $sqlW);
+    if($resultW){
+      //echo "ok";
+    }else{
+      echo mysqli_error($resultW);
+      echo $word;
+      echo $setId;
+    }
 
 
   }

@@ -13,7 +13,7 @@ include("inc/index.php");
               <a href="sets.php">sets</a>
             </button>
             <button type="button" class="button"name="button">
-              <a href="#">lessons</a>
+              <a href="lessons.php">lessons</a>
             </button>
             <button type="button" class="button"name="button">
               <a href="../login/logout.php">log out</a>
