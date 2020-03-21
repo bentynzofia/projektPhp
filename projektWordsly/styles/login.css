@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,900&display=swap');
 
-html, body, *{
+html, body, * {
   margin: 0;
   padding: 0;
   font-family: Nunito, sans-serif;
   font-size: 12px;
 }
-#notice{
+
+#notice {
   color: grey;
 }
-input, button{
+
+input, button {
   outline: none;
 }
 
-form{
+form {
   margin-top: -20%;
   background-color: white;
   width: 200px;
@@ -23,33 +25,37 @@ form{
   border-radius: 15px;
   box-shadow: 0px 5px 10px lightgrey;
 }
-input{
+
+input {
   outline:none;
   border: none;
   border-bottom: 1px solid  #BBD2FF;
   margin-top: 15%;
   padding: 4px;
-
 }
-input::placeholder{
+
+input::placeholder {
   color: grey;
   padding-bottom:10px;
 }
-.button{
+
+.button {
 border: none;
 height: 25px;
 width: 150px;
 border-radius: 15px;
 }
-.fillIn{
+
+.fillIn {
 color: white;
 background-color:  #BBD2FF;
-  }
+}
 
-.space{
+.space {
   margin-top: 10px;
 }
-.studentInterface{
+
+.studentInterface {
   width: 0;
   height: 0;
   border-top: 300px solid #BBD2FF;
@@ -58,7 +64,7 @@ background-color:  #BBD2FF;
   z-index: -1;
 }
 
-.text{
+.text {
   position: absolute;
   left:10%;
   top:5%;
@@ -67,28 +73,31 @@ background-color:  #BBD2FF;
   color: white;
   text-align: right;
 }
-.logo{
+
+.logo {
   position: fixed;
   font-size: 160%;
   font-weight: 900;
 }
 
-.studentContain{
+.studentContain {
   position: absolute;
   top: 35%;
   left:50%;
   scroll-behavior: smooth;
 }
-.buttons{
+
+.buttons {
   margin-top: 30%;
 }
+
 .userType {
   border-radius: 15px;
   border: 1px solid #BBD2FF;
   outline: none;
 }
 
-img{
+img {
   max-width: 25%;
   position: absolute;
   right: 5%;
@@ -96,8 +105,7 @@ img{
   z-index:-2;
 }
 
-
-@media only screen and (max-width:960px){
+@media only screen and (max-width:960px) {
   .studentContain button, .studentContain input{
 
   }

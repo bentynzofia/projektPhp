@@ -2,7 +2,6 @@
 include("inc/loginlayout.php");
 include("../rejestration/register.php");
  ?>
-
         <form  method="post">
           <input type="text" name="login" value="" placeholder="username" autocomplete="off"
           <?php
@@ -25,12 +24,9 @@ include("../rejestration/register.php");
           </select>
           <input type="submit" class="fillIn space button" name="registering" value="let's get it">
         </form>
-
       </div>
       </div>
-
       <img src="../../img/8852.jpg" alt="">
-
     </div>
   </body>
 </html>

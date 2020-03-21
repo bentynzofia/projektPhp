@@ -4,7 +4,6 @@ require_once("../func/connection.php");
 if(isset($_POST['button'])) {
   header('Location: signin.php');
 }
-
 if(isset($_POST['loginButton'])){
   //echo "lol";
   if(!empty($_POST['login'])&&!empty($_POST['password'])){
@@ -24,7 +23,6 @@ if(isset($_POST['loginButton'])){
 
     $_SESSION['login'] = $login;
     $_SESSION['password'] = $password;
-    
 
     $resultT = mysqli_query($conn, $teacherLogin);
     $resultTp = mysqli_query($conn, $teacherPass);
@@ -37,15 +35,12 @@ if(isset($_POST['loginButton'])){
 
     while($row = mysqli_fetch_assoc($resultS)){
       // echo $row["studentLogin"];
-
       if($login == $row["studentLogin"]){
         while($row2 = mysqli_fetch_assoc($resultSp)){
           if(password_verify($password, $passwordH)){
           header("location: ../user/student.php");
-
+          }
         }
-        }
-
       }
       while($row = mysqli_fetch_assoc($resultT)){
 
@@ -53,28 +48,22 @@ if(isset($_POST['loginButton'])){
           while($row2 = mysqli_fetch_assoc($resultTp)){
             if(password_verify($password, $passwordH)){
             header("location: ../user/teacher.php");
+            }
           }
-          }
-
         }
-
       }
     }
     while($row = mysqli_fetch_assoc($resultA)){
 
-    if($login == $row["adminLogin"]){{
-      while($row2 = mysqli_fetch_assoc($resultAp)){
-        if($password == $row2["adminPass"]){
-        header("location: ../user/admin.php");
+      if($login == $row["adminLogin"]){{
+        while($row2 = mysqli_fetch_assoc($resultAp)){
+          if($password == $row2["adminPass"]){
+          header("location: ../user/admin.php");
+        }
       }
-      }
-
     }
-
   }
 }
-
-
     }
   }
 }

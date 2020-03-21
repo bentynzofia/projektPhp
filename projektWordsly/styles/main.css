@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,900&display=swap');
 
-html, body, *{
+html, body, * {
   margin: 0;
   padding: 0;
   cursor: default;
+}
 
+h3 {
+  font-family: Nunito, sans-serif;
 }
 .alert {
   font-family: Nunito, sans-serif;
   color: grey;
 }
-.studentInterface{
+
+.studentInterface {
   width: 0;
   height: 0;
   border-top: 900px solid #BBD2FF;
@@ -18,7 +22,8 @@ html, body, *{
   position:fixed;
   z-index: -1;
 }
-.text{
+
+.text {
   position: absolute;
   left:10%;
   top:5%;
@@ -27,27 +32,28 @@ html, body, *{
   color: white;
   text-align: right;
 }
-.logo{
+
+.logo {
   position: fixed;
   font-size: 160%;
   font-weight: 900;
 }
-.greeting{
+
+.greeting {
   margin-top:50px;
   position: fixed;
   font-weight: 600;
 }
 
-.studentContain{
+.studentContain {
   position: absolute;
   top: 0%;
   left:60%;
   min-height: 100%;
   scroll-behavior: smooth;
-
 }
 
-.leftPanel{
+.leftPanel {
   margin: 0px;
   /* position: relative; */
   left: 20%;
@@ -56,48 +62,50 @@ html, body, *{
   padding: 0px;
 }
 
-.leftPanel input{
+.leftPanel input {
 width: 40%;
 background-color: #eee;
 text-align: center;
 margin: 10px;
 padding: 2px;
-  }
+}
 
 .leftPanelDiv {
 text-align: center;
-  }
-.buttons{
+}
+
+.buttons {
   margin-top: 80%;
   margin-left: 100%;
 }
-.button{
-border: none;
-height: 25px;
-width: 150px;
-border-radius: 15px;
-outline:none;
-border: none;
-margin-top: 15%;
-padding: 4px;
+
+.button {
+  border: none;
+  height: 25px;
+  width: 150px;
+  border-radius: 15px;
+  outline:none;
+  border: none;
+  margin-top: 15%;
+  padding: 4px;
   transition: 0.4s ease;
-    font-family: Nunito, sans-serif;
-    font-size: 80%;
-    text-align: center;
+  font-family: Nunito, sans-serif;
+  font-size: 80%;
+  text-align: center;
 }
 
-.menuOpt{
-margin-top: -20%;
-background-color: white;
-width: 200px;
-height: 200px;
-transform: translateX(-150%);
-text-align: center;
-border-radius: 15px;
-box-shadow: 0px 5px 10px lightgrey;
+.menuOpt {
+  margin-top: -20%;
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  transform: translateX(-150%);
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px lightgrey;
 }
 
-.formOpt{
+.formOpt {
   position: absolute;
   margin-top: 12.5%;
   margin-left: 25%;
@@ -108,24 +116,24 @@ box-shadow: 0px 5px 10px lightgrey;
   text-align: center;
   border-radius: 15px;
   box-shadow: 0px 5px 10px #96A8CC;
-
 }
 
-.inputCol{
+.inputCol {
   color: #9D9B9B;
 }
-.studentContain a{
+
+.studentContain a {
   text-decoration: none;
   color:#9D9B9B;
   cursor: pointer;
-
 }
-.studentContain button:hover{
+
+.studentContain button:hover {
   transition: 0.4s ease;
   box-shadow: 0px 3px 2px rgb(112, 126, 153,0.66) ;
 }
 
-img{
+img {
   max-width: 10%;
   position: absolute;
   right: 5%;

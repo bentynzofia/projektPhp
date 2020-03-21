@@ -10,13 +10,10 @@ if(isset($_POST["registering"]) &&  $_POST['login'] && !empty($_POST['password']
   $passwordH = PASSWORD_HASH($password, PASSWORD_DEFAULT);
   $email=$_POST['email'];
 
-
   $sqlStudent = "INSERT INTO `students`(`studentId`, `studentLogin`, `studentEmail`, `studentPass`) VALUES ('','$login','$email', '$passwordH')";
   $sqlTeacher = "INSERT INTO `teachers`(`teacherId`, `teacherLogin`, `teacherEmail`, `teacherPass`) VALUES ('','$login','$email','$passwordH')";
 
-
   if($userType=="student"){
-
     $studentLoginCheck = "SELECT `studentLogin` FROM `students`  WHERE  `studentLogin`= '$login'";
     $resultSC = mysqli_query($conn, $studentLoginCheck);
     $row1 = mysqli_fetch_assoc($resultSC);
@@ -24,8 +21,6 @@ if(isset($_POST["registering"]) &&  $_POST['login'] && !empty($_POST['password']
     $studentEmailCheck = "SELECT `studentEmail` FROM `students` WHERE `studentEmail`='$email'";
     $resultSEC = mysqli_query($conn, $studentEmailCheck);
     $row2 = mysqli_fetch_assoc($resultSEC);
-
-
 
     if(!$row1){
       if(!$row2){
