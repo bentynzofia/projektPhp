@@ -37,8 +37,8 @@ if(isset($_POST['lesson$i'])){
   while($row = mysqli_fetch_assoc($resultS)){
     $translation = $row["Ltranslation"];
     $word = $row["Lword"];
-     echo '<input class="button" type="submit" name='.'word$j'.' value='.$word.'>';
-     echo '<input class="button" type="submit" name='.'translation$j'.' value='.$translation.'>';
+     echo '<input disabled class="button" type="submit" name='.'word$j'.' value='.$word.'>';
+     echo '<input disabled class="button" type="submit" name='.'translation$j'.' value='.$translation.'>';
      $j++;
   }
   echo '</form>';

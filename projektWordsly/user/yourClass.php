@@ -18,7 +18,7 @@ if(isset($_POST["but9"])){
   echo '<div class="formOpt">';
   echo '<form method="post" action="lessonsS.php" class="leftPanel">';
   echo '<h3>Your class: </h3>';
-  echo '<input class="button" type="submit" name="klasa" value='.$klasaName.'>';
+  echo '<input disabled class="button" type="submit" name="klasa" value='.$klasaName.'>';
   echo '</form>';
   echo '</div>';
 }

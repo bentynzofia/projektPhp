@@ -32,7 +32,7 @@ if(isset($_POST['class$i'])){
   $j = 0;
   while($row = mysqli_fetch_assoc($resultS)){
     $stud = $row["studentLogin"];
-    echo '<input class="button" type="submit" name='.'stud$j'.' value='.$stud.'>';
+    echo '<input disabled class="button" type="submit" name='.'stud$j'.' value='.$stud.'>';
     $j++;
   }
   echo '</form>';
